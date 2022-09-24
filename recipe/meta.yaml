@@ -7,7 +7,6 @@ package:
   version: {{ version }}
 
 source:
-  # path: /Users/vincent/dev/libobjcryst
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
