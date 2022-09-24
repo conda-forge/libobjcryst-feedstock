@@ -1,12 +1,13 @@
 {% set name = "libobjcryst" %}
 {% set version = "2022.1" %}
-{% set sha256 = "4c4859218b33bacc002318b2bf8504193b9accdafec1fca2e72ab3c4eb8abc56" %}
+{% set sha256 = "3ce1626ba7bd312d45adcc4599b626692a389d4274fe36da773147dbd97549df" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
+  # path: /Users/vincent/dev/libobjcryst
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
