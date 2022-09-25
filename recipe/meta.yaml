@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
 {% set version = "2022.1" %}
-{% set sha256 = "1262c7fdf369e9ce4718f42f93fb5ae5a0bc948c270eb8a3fe91e2574bbaa217" %}
+{% set sha256 = "6ddafff9981cf7205589f5268a4b9b56828bd2ce2eee7accbdc5e4f51a324285" %}
 
 package:
   name: {{ name|lower }}
