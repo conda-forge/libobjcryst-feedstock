@@ -5,7 +5,12 @@ Import('env')
 import os
 import platform
 
+if platform.system().lower() == 'darwin' and 'CONDA_BUILD_SYSROOT' in os.environ:
+    env.AppendUnique(CPPFLAGS=['-isysroot', os.environ['CONDA_BUILD_SYSROOT']])
+    env.AppendUnique(LINKFLAGS=['-isysroot', os.environ['CONDA_BUILD_SYSROOT']])
+
 # Apply environment settings for Anaconda compilers
+env.Replace(CC=os.environ['CC'])
 env.Replace(CXX=os.environ['CXX'])
 env.MergeFlags(os.environ['CFLAGS'])
 env.MergeFlags(os.environ['CPPFLAGS'])
