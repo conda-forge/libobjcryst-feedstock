@@ -25,6 +25,7 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - scons
+    - git-lfs
   host:
     - libboost-headers
 
