@@ -1,18 +1,23 @@
-{% set version = "2024.2.1" %}
+{% set version = "2026.1" %}
 
 package:
   name: libobjcryst
   version: {{ version }}
 
 source:
-  - url: https://github.com/diffpy/libobjcryst/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 5efbac9190a78b47fc8d0b1654e35ff6b210eeab79afba3ea935e2ec5f67ece8
-  - folder: src/objcryst
-    git_url: https://github.com/vincefn/objcryst.git
-    git_rev: d40d537b642abc0211ccd071e459c7ccb3495c3d
+  - git_url: https://github.com/diffpy/libobjcryst.git
+  - git_rev: v2026.1
+  - git_depth: 20
+# (we need a git submodule, so prefer git)
+# Other method using two tarballs:
+#  - url: https://github.com/diffpy/libobjcryst/archive/refs/tags/v{{ version }}.tar.gz
+#    sha256: 5efbac9190a78b47fc8d0b1654e35ff6b210eeab79afba3ea935e2ec5f67ece8
+#  - folder: src/objcryst
+#    git_url: https://github.com/vincefn/objcryst.git
+#    git_rev: d40d537b642abc0211ccd071e459c7ccb3495c3d
 
 build:
-  number: 2
+  number: 1
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
