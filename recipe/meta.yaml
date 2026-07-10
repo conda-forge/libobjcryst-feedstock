@@ -2,7 +2,7 @@
 
 package:
   name: libobjcryst
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   - git_url: https://github.com/diffpy/libobjcryst.git
